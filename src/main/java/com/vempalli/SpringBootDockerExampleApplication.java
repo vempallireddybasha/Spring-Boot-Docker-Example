@@ -13,6 +13,10 @@ public class SpringBootDockerExampleApplication {
 	public String get() {
 		return "Docker Image is Running...";
 	}
+	@GetMapping("/msg")
+	public String message() {
+		return "Jenkins-Docker-Integrated Successfully...";
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootDockerExampleApplication.class, args);
 	}

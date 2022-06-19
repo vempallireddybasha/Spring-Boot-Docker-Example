@@ -3,6 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
+	
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.0</version>
@@ -10,11 +11,11 @@
 	</parent>
 	<groupId>com.vempalli</groupId>
 	<artifactId>Spring-Boot-Docker-Example</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1.SNAPSHOT</version>
 	<name>Spring-Boot-Docker-Example</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -34,8 +35,21 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
 			</plugin>
+			
+		<plugin>
+  <groupId>com.google.cloud.tools</groupId>
+  <artifactId>jib-maven-plugin</artifactId>
+  <version>2.8.0</version>
+  <configuration>
+    <to>
+      <image>registry.hub.docker.com/reddybasha/google-jib-image</image>
+    </to>
+  </configuration>
+</plugin>
 		</plugins>
+		<finalName>Spring-Boot-Docker-Example</finalName>
 	</build>
 
 </project>
