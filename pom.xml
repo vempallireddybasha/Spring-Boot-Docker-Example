@@ -50,7 +50,7 @@
 <!-- </plugin>  -->
     
 		</plugins>
-		<finalName>Spring-Boot-Docker-Example</finalName>
+		<finalName>spring-boot-docker-example</finalName>
 	</build>
 
 </project>
